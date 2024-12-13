@@ -30,7 +30,6 @@ app.get("/api/:date?", function (req, res) {
     }else{
       var unix=date
       var utc=new Date(date*1).toUTCString()
-      console.log(utc)
     }
 
       if(utc=="Invalid Date"){
