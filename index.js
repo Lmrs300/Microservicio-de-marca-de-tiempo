@@ -38,7 +38,7 @@ app.get("/api/:date?", function (req, res) {
     }else{
       if (/\d{5,}/.test(date) && Number(date)) {
         var unix=Number(date)
-        var utc=new Date(Number(date*1)).toUTCString()
+        var utc=new Date(Number(date)).toUTCString()
         res.json({unix:unix,utc:utc})
       }else{
         res.json({error:"Invalid Date"})
